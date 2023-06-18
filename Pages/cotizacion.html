@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ieme Servicios</title>
+    <link rel="Icon" href="../Archivos/ieme.ico">
+    <link rel="stylesheet" type="text/css" href="../Estilos/style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+<body>
+    <style type="text/css"> </style>
+    <header class="banner">
+        <a href="../index.html"><img class="logo" src="../Archivos/ieme.png" alt="logoieme"></a>
+        <nav class="navbanner">
+            <ul>
+                <li><a href="../Pages/nosotros.html">Nosotros</a></li>
+                <li><a href="../Pages/cotizacion.html">Servicios</a></li>
+                <li><a href="../Pages/turnos.html">Tienda</a></li>
+                <li><a href="../Pages/más.html">Galería</a></li>
+            </ul>     
+        </nav>
+        <div class="sociallogo">
+            <a href="https://www.instagram.com" target="_blank"><img src="../Archivos/instagram.png" alt="Instagram"></a>
+            <a href="https://www.youtube.com" target="_blank"><img src="../Archivos/youtube.png" alt="Youtube"></a>   
+        </div> 
+    </header>
+    <main>
+        <article>
+            <h1>¿En qué le podemos ayudar?</h1> 
+            <section>
+                <form>
+                    <fieldset class=" container col-md-8">
+                    <legend>Complete el siguiente formulario y envienoslo para que pueda contactarnos.</legend>
+                    <legend>Le brindaremos atención telefónica, vía mail y si lo desea, una visita programada.</legend>
+                    <div class="mb-3 col-md-7">
+                        <label for="Select" class="form-label">1. Selecciona el área de especialización.</label>
+                        <select id="Select" class="form-select">
+                            <option>Electricista</option>
+                            <option>Climatización</option>
+                            <option>Refrigeración</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-md-7">
+                        <label for="TextInput" class="form-label">2.a. En el caso de refrigeración o climatización, especifique el equipo.</label>
+                        <select id="Select" class="form-select">
+                            <option>Split (2500 frigorías a 9000 frigorías)</option>
+                            <option>Piso-techo</option>
+                            <option>Multisplit</option>
+                            <option>Cassette</option>
+                            <option>Baja silueta</option>
+                            <option>Rooftop</option>
+                        </select>
+                        <input type="text" id="TextInput" class="form-control" placeholder="Marca del equipo">
+                        </div>
+                    </div>
+                    <div class="mb-3 col-md-7">
+                        <label for="TextInput" class="form-label">2.b. Especifique la clase de servicio de climatización o refrigeración.</label>
+                        <select id="Select" class="form-select">
+                            <option>Proyecto climatización</option>
+                            <option>Mantenimiento de emergencia</option>
+                            <option>Mantenimiento / revisión de rutina</option>
+                            <option>Instalación de nueva/s unidad/es</option>
+                            <option>Asesoramiento remoto</option>
+                        </select>
+                        <input type="text" id="TextInput" class="form-control" placeholder="Otra tarea">
+                        </div>
+                    </div>
+                    <div class="mb-3 col-md-7">
+                        <label for="TextInput" class="form-label">3. En Caso de requerir asistencia en electricidad, especifique qué servicio requiere.</label>
+                        <select id="Select" class="form-select">
+                            <option>Proyecto eléctrico</option>
+                            <option>Mantenimiento de emergencia</option>
+                            <option>Mantenimiento de rutina</option>
+                            <option>Extensión de instalación existente</option>
+                            <option>Instalación de artefactos (luminarias, ventiladores, extractores, ...)</option>
+                            <option>Instalación o extensión de circuito para equipo de climatización</option>
+                            <option>Asesoramiento remoto</option>
+                        </select>
+                        <input type="text" id="TextInput" class="form-control" placeholder="Otra tarea">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="TextInput" class="form-label">4. Seleccione cómo le gustaría que nos contactemos con usted.</label>    
+                            <div class="form-check col-md-5">
+                                <input class="form-check-input" type="checkbox" id="FieldsetCheck">
+                                <label class="form-check-label" for="FieldsetCheck">Vía telefónica.
+                                </label>
+                                <input type="text" id="TextInput" class="form-control" placeholder="N° de teléfono">
+                            </div>
+                            <div class="form-check col-md-5">
+                                <input class="form-check-input" type="checkbox" id="FieldsetCheck">
+                                <label class="form-check-label" for="FieldsetCheck">Vía mail.
+                                </label>
+                                <input type="text" id="TextInput" class="form-control" placeholder="Correo electrónico">
+                            </div>
+                            <div class="form-check col-md-5">
+                                <input class="form-check-input" type="checkbox" id="FieldsetCheck">
+                                <label class="form-check-label" for="FieldsetCheck">Visita programada. (costos adicionales)
+                                </label>
+                                <input type="text" id="TextInput" class="form-control" placeholder="Ciudad/Dirección">
+                            </div>
+                    </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </fieldset>
+                  </form>
+            </section>    
+        </article>
+    </main>
+        <footer>
+            <ul>
+                <li class="fbanner">
+                    <a class="botoninicio" href="../index.html">Inicio</a>
+                </li>
+            </ul>
+        </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html> 

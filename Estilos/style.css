@@ -1,0 +1,240 @@
+
+/* ESTILOS GENEALES */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/subtle_grunge.png);
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/*------------------------------------------------- HEADER ------------------------------------------------------*/
+
+/*Contiene el LOGO PRINCIPAL, MENU NAVBAR, ICONOS REDES SOCIALES*/
+
+.banner {
+    /*background-color: #d4465ebb;*/
+    /*border: solid 1px #d4465ebb;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;*/
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;    
+}
+
+.logo {
+    width: 90px;
+    margin: 10px;
+    flex-direction: row;
+    align-self: center;
+}
+
+/*PADRE Iconos redes sociales*/
+.sociallogo {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+/*HIJO Iconos redes sociales*/
+.sociallogo img {
+    margin: 10px;
+    width: 30px;
+}
+
+/*PADRE Navbar*/
+.navbanner {
+    align-self: center;
+}
+
+/*PADRE Botones navbar*/
+.navbanner li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    float: left;
+}
+
+/*HIJO Botones navbar*/
+.navbanner a {
+    margin: 30px;
+    font-size: 1em;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold;
+    color: black;
+    text-shadow: 3px 0px 3px rgb(233, 202, 202);
+    text-decoration: none;
+}
+
+
+/*------------------------------------------------------- ARTICLE ---------------------------------------------------*/
+
+article h1 {
+    font-size: 2rem; 
+    font-family: 'Julius Sans One', sans-serif;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgb(255, 255, 255, 0.829), -1px -1px rgb(255, 255, 255, 0.829), -1px 1px rgb(255, 255, 255, 0.829);
+    background-color:#d4465ea6;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+ 
+li.fbanner {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.botoninicio{
+    font-family: 'Julius Sans One', sans-serif;
+    background-color:#d4465ea6;
+    text-decoration: none;
+    color: black;
+    justify-self: center;
+    
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+.sociallogo { 
+    width: 40px;
+}
+
+/*-------------- Aquí los estilos que afectan exclusivamente a etiquetas del index------------------*/
+
+.textoinicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.textoinicio p {
+    text-align: justify;
+    max-width: 77%;
+    font-size: 1.3em;
+    margin-top: 20px;
+}
+
+.gridmain {
+    display: grid;
+    grid-template-areas: 
+    ".  img1   img1   h2e   ."
+    ".  img1   img1   p1    ."
+    "rayo menu1  menu2  menu3  copo"
+    ". menu1a menu2a menu3a ."
+    ".  h2c   img2   img2   ."
+    ".  p2    img2   img2   .";
+    
+    grid-template-rows: 60px 300px 60px 20px 60px 300px;
+    grid-template-columns: 5% 35% 5% 35% 5%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.imgmain1{
+    width: 80%;
+    margin: 10px;
+    grid-area: img1;
+    border-radius: 20px;
+}
+.imgmain2 {
+    width: 80%;
+    margin: 10px;
+    grid-area: img2;
+    border-radius: 20px;
+}
+
+.h2cli, .h2elec {
+    text-align: justify;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 2em;
+    text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
+}
+.h2elec {
+    grid-area: h2e;
+}
+
+.h2cli{
+    grid-area: h2c;
+}
+
+.p1 {
+    grid-area: p1;
+    text-align: justify;
+    font-size: 1.3em;
+    padding: 20px;
+}
+
+.p2 {
+    grid-area: p2;
+    text-align: justify;
+    font-size: 1.3em;
+    padding: 20px;
+}
+.rayo {
+    width: 30px;
+    grid-area: rayo;
+    align-items: center;
+}
+
+.copo {
+    width: 30px;
+    grid-area: copo;
+    align-items:center;
+}
+
+
+/* ----------------------Menu central index----------------------- */
+
+.cotizacionimg {
+    width: 40px;
+    grid-area: menu1;
+}
+
+.menucentral1 {
+    grid-area: menu1a;
+}
+
+.turnosimg {
+    width: 40px;
+    grid-area: menu2;
+}
+
+.menucentral2 {
+    grid-area: menu2a;
+    text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
+}
+
+.galeriaimg {
+    width: 40px;
+    grid-area: menu3;
+    text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
+}
+
+.menucentral3 {
+    grid-area: menu3a;
+    text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
+}
+/* ----------------------------------------------------- FOOTER ------------------------------------------------------ */
+
+
+
+/* Aquí los estilos que afectan exclusivamente al nosotros.html*/
+
+/* Aquí los estilos que afectan exclusivamente al cotizacion.html*/
+
+/* Aquí los estilos que afectan exclusivamente al turnos.html*/
+
+/* Aquí los estilos que afectan exclusivamente al mas.html*/
