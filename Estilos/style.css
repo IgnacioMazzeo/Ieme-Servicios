@@ -26,41 +26,45 @@ body {
     flex-wrap: wrap;    
 }
 
+.footerbanner {
+    display: none;
+}
+
+/*Nav*/
+.navbanner {
+    align-self: center;
+    display: flex;
+    align-items: center;
+}
+
 .logo {
     width: 90px;
-    margin: 10px;
+    margin: 10px 30px;
     flex-direction: row;
     align-self: center;
 }
 
-/*PADRE Iconos redes sociales*/
-.sociallogo {
-    display: flex;
+/*Redes sociales*/
+.instagram img, .youtube img {
     flex-direction: row;
     align-self: center;
-}
-
-/*HIJO Iconos redes sociales*/
-.sociallogo img {
+    justify-self: center;
     margin: 10px;
     width: 30px;
 }
 
-/*PADRE Navbar*/
-.navbanner {
-    align-self: center;
-}
-
-/*PADRE Botones navbar*/
+/*Botones navbar*/
 .navbanner li {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     float: left;
+    align-self: center;
+    justify-self: center;
+    margin-top: 16px;
 }
 
-/*HIJO Botones navbar*/
-.navbanner a {
+.navbanner li a {
     margin: 30px;
     font-size: 1em;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -68,6 +72,19 @@ body {
     color: black;
     text-shadow: 3px 0px 3px rgb(233, 202, 202);
     text-decoration: none;
+}
+
+@media (max-width: 576px) {
+    .navbanner ul {
+       display: none;
+    }
+
+    .instagram {
+        order: -1;
+    }
+    .youtube img, .instagram img{
+        width: 30px;
+    }
 }
 
 
@@ -84,11 +101,14 @@ article h1 {
     padding: 10px;
 }
  
-li.fbanner {
+.buttonbanner {
     display: flex;
     flex-direction: row;
     justify-content: end;
     align-items: center;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-bottom: 100px;
 }
 
 .botoninicio{
@@ -110,7 +130,7 @@ li.fbanner {
     width: 40px;
 }
 
-/*-------------- Aquí los estilos que afectan exclusivamente a etiquetas del index------------------*/
+/*-------------- Estilos exclusivos del index------------------*/
 
 .textoinicio {
     display: flex;
@@ -124,6 +144,11 @@ li.fbanner {
     margin-top: 20px;
 }
 
+@media (max-width: 576px) {
+    .textoinicio p {
+       font-size: 1rem;
+    }
+}
 .gridmain {
     display: grid;
     grid-template-areas: 
@@ -173,15 +198,15 @@ li.fbanner {
 .p1 {
     grid-area: p1;
     text-align: justify;
-    font-size: 1.3em;
-    padding: 20px;
+    font-size: 1.1em;
+    padding: 30px 40px 30px 20px;
 }
 
 .p2 {
     grid-area: p2;
     text-align: justify;
-    font-size: 1.3em;
-    padding: 20px;
+    font-size: 1.1em;
+    padding: 30px 20px 30px 40px;
 }
 .rayo {
     width: 30px;
@@ -198,7 +223,7 @@ li.fbanner {
 
 /* ----------------------Menu central index----------------------- */
 
-.cotizacionimg {
+.cotizacionimg, img{
     width: 40px;
     grid-area: menu1;
 }
@@ -207,7 +232,7 @@ li.fbanner {
     grid-area: menu1a;
 }
 
-.turnosimg {
+.turnosimg, img{
     width: 40px;
     grid-area: menu2;
 }
@@ -217,7 +242,7 @@ li.fbanner {
     text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
 }
 
-.galeriaimg {
+.galeriaimg, img {
     width: 40px;
     grid-area: menu3;
     text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
@@ -227,14 +252,59 @@ li.fbanner {
     grid-area: menu3a;
     text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
 }
+
+@media (max-width: 576px) {
+    .gridmain {
+        display: grid;
+        grid-template-areas: 
+        "  h2e  "
+        "  img1 "
+        "   p1  "
+        "  h2c  "
+        " img2  "
+        "   p2  ";
+        
+        grid-template-rows: 100px 200px 200px 100px 200px 200px;
+        grid-template-columns: 100%;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+        margin-bottom: 100px;
+}
+    .menucentral1 , .menucentral2, .menucentral3 , .rayo, .copo, .galeriaimg, .cotizacionimg, .turnosimg {
+        display: none;
+    }
+
+    .p1, .p2 {
+        font-size: 1em;
+        padding: 40px;
+    }
+    
+    .footerbanner {
+        display: block;
+    }
+
+    .navbar-brand {
+        max-width: 20%;
+        font-size: 1em;
+        align-items: center;
+    }
+}
+
 /* ----------------------------------------------------- FOOTER ------------------------------------------------------ */
 
 
 
-/* Aquí los estilos que afectan exclusivamente al nosotros.html*/
+/* Estilos exclusivos del "nosotros.html"*/
 
-/* Aquí los estilos que afectan exclusivamente al cotizacion.html*/
+/* Estilos exclusivos del "cotizacion.html"*/
 
-/* Aquí los estilos que afectan exclusivamente al turnos.html*/
+form div button{
+    background-color: rosybrown;
+}
 
-/* Aquí los estilos que afectan exclusivamente al mas.html*/
+/* Estilos exclusivos del "turnos.html"*/
+
+/* Estilos exclusivos del "mas.html"*/
