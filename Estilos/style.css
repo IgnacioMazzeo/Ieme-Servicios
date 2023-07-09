@@ -208,7 +208,7 @@ form div button {
   .instagram img {
     width: 30px;
   }
-  .gridmain {
+  article .gridmain {
     grid-template-areas: "  h2e  " "  img1 " "   p1  " "  h2c  " " img2  " "   p2  ";
     grid-template-rows: 100px 200px 200px 100px 200px 200px;
     grid-template-columns: 100%;
