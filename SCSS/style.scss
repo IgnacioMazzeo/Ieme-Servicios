@@ -15,13 +15,6 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.footerbanner {
-    display: none;
-    li{
-        text-decoration: none;
-    }
-}
-
 header {
     display: flex;
     justify-content: center;
@@ -99,24 +92,23 @@ article {
 @import "galeria.scss";
 
 footer {
-   
+
     ul {
         margin-left: 0px;
         padding-left: 0px;
         
         .buttonbanner {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             margin-top: 30px;
             margin-bottom: 100px;
             
             .botoninicio {
+                color: black;
                 display: flex;
                 flex-direction: row;
                 justify-self: center;
-                align-items: center;
                 text-decoration: none;
                 font-weight: bold;
                 background-color: $rosaprincipal;
@@ -125,26 +117,31 @@ footer {
                 border-top-right-radius: 5px;
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
-    
             }
         }
     }
 
-
-    a {
-        font-family: 'Julius Sans One', sans-serif;
-        font-size: 0.7em;
-        text-decoration: none;
-        color: black;
-        justify-items: stretch;
-        text-align: center;
+    .footerbanner {
+        display: none;
+        
+        .navbar-brand {
+            max-width: 20%;
+            font-size: 0.5em;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            justify-items: stretch;
+            text-align: center;
+        
+        }
     }
 }
 
 
 
 @media (max-width: 576px) { 
-    header .logo {
+    header {
+        .logo {
         position: relative;
         display: flex;
         flex-direction: row;
@@ -153,10 +150,15 @@ footer {
         z-index: 0;
         transform: none;
         margin: 10px;        
+        }
     }
 
     article h1 {
         padding: 20px 10px;
         font-size: 1.5em;
+    }
+
+    footer .footerbanner {
+        display: block;
     }
 }

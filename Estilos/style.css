@@ -10,13 +10,6 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
-.footerbanner {
-  display: none;
-}
-.footerbanner li {
-  text-decoration: none;
-}
-
 header {
   display: flex;
   justify-content: center;
@@ -252,14 +245,6 @@ article .gridmain .p2 {
     font-size: 1em;
     padding: 40px;
   }
-  .footerbanner {
-    display: block;
-  }
-  .navbar-brand {
-    max-width: 20%;
-    font-size: 1em;
-    align-items: center;
-  }
 }
 section form {
   margin: 10px;
@@ -324,17 +309,16 @@ footer ul {
 }
 footer ul .buttonbanner {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-top: 30px;
   margin-bottom: 100px;
 }
 footer ul .buttonbanner .botoninicio {
+  color: black;
   display: flex;
   flex-direction: row;
   justify-self: center;
-  align-items: center;
   text-decoration: none;
   font-weight: bold;
   background-color: rgba(212, 70, 94, 0.6509803922);
@@ -344,9 +328,13 @@ footer ul .buttonbanner .botoninicio {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-footer a {
-  font-family: "Julius Sans One", sans-serif;
-  font-size: 0.7em;
+footer .footerbanner {
+  display: none;
+}
+footer .footerbanner .navbar-brand {
+  max-width: 20%;
+  font-size: 0.5em;
+  align-items: center;
   text-decoration: none;
   color: black;
   justify-items: stretch;
@@ -368,6 +356,9 @@ footer a {
     padding: 20px 10px;
     font-size: 1.5em;
   }
+  footer .footerbanner {
+    display: block;
+  }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=Style.css.map */
