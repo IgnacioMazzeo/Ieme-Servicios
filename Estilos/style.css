@@ -1,5 +1,5 @@
 /*Varialbles*/
-/*Estilos*/
+/*ESTILOS DE GLOBALES*/
 * {
   margin: 0px;
   padding: 0px;
@@ -10,6 +10,7 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
+/*ESTILOS GENERALES DEL HEADER*/
 header {
   display: flex;
   justify-content: center;
@@ -59,6 +60,7 @@ header nav .instagram img, header nav .youtube img {
   width: 30px;
 }
 
+/*ESTILOS LOS H1*/
 article h1 {
   font: normal 2rem "Julius Sans One", sans-serif;
   text-shadow: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgba(255, 255, 255, 0.829), -1px -1px rgba(255, 255, 255, 0.829), -1px 1px rgba(255, 255, 255, 0.829);
@@ -71,6 +73,7 @@ article h1 {
   z-index: 1;
 }
 
+/*ESTILOS DEL INDEX*/
 article .textoinicio {
   display: flex;
   flex-direction: column;
@@ -211,9 +214,6 @@ article .gridmain .p2 {
 }
 
 @media (max-width: 576px) {
-  article .textoinicio p {
-    font-size: 1rem;
-  }
   header nav ul {
     display: none;
   }
@@ -224,6 +224,9 @@ article .gridmain .p2 {
   .instagram img {
     width: 30px;
   }
+  article .textoinicio p {
+    font-size: 1rem;
+  }
   article .gridmain {
     grid-template-areas: "  h2e  " "  img1 " "   p1  " "  h2c  " " img2  " "   p2  ";
     grid-template-rows: 100px 200px 200px 100px 200px 200px;
@@ -231,21 +234,27 @@ article .gridmain .p2 {
     margin-top: 30px;
     margin-bottom: 100px;
   }
-  .menucentral1,
-  .menucentral2,
-  .menucentral3,
-  .rayo,
-  .copo,
-  .galeriaimg,
-  .cotizacionimg,
-  .turnosimg {
-    display: none;
-  }
   article .gridmain .p1, article .gridmain .p2 {
     font-size: 1em;
     padding: 40px;
   }
+  article .gridmain .menucentral1,
+  article .gridmain .menucentral2,
+  article .gridmain .menucentral3,
+  article .gridmain .rayo,
+  article .gridmain .copo,
+  article .gridmain .galeriaimg,
+  article .gridmain .cotizacionimg,
+  article .gridmain .turnosimg {
+    display: none;
+  }
+  article .gridmain .imgmain1, article .gridmain .imgmain2 {
+    animation: none;
+    opacity: 1;
+  }
 }
+/*ESTILOS DE NOSOTROS*/
+/*ESTILOS DE CONTACTOS*/
 section form {
   margin: 10px;
 }
@@ -263,6 +272,8 @@ section form legend {
     text-align: justify;
   }
 }
+/*ESTILOS DE TIENDA*/
+/*ESTILOS DE GALERIA*/
 main {
   display: flex;
   flex-direction: column;
@@ -303,6 +314,7 @@ main .portafolio2 div .h2galeria {
   text-align: center;
 }
 
+/*ESTILOS DE GENERALES DEL FOOTER*/
 footer ul {
   margin-left: 0px;
   padding-left: 0px;
@@ -337,7 +349,6 @@ footer .footerbanner .navbar-brand {
   align-items: center;
   text-decoration: none;
   color: black;
-  justify-items: stretch;
   text-align: center;
 }
 
@@ -361,4 +372,4 @@ footer .footerbanner .navbar-brand {
   }
 }
 
-/*# sourceMappingURL=Style.css.map */
+/*# sourceMappingURL=style.css.map */

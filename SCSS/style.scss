@@ -4,7 +4,7 @@ $h2: normal 2em 'Julius Sans One', sans-serif;
 $rosaprincipal:#d4465ea6;
 $sombrablanca: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgb(255, 255, 255, 0.829), -1px -1px rgb(255, 255, 255, 0.829), -1px 1px rgb(255, 255, 255, 0.829);
 
-/*Estilos*/
+/*ESTILOS DE GLOBALES*/
 * {
     margin: 0px;
     padding: 0px;
@@ -14,7 +14,7 @@ body {
     background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/subtle_grunge.png);
     font-family: 'IBM Plex Sans', sans-serif;
 }
-
+/*ESTILOS GENERALES DEL HEADER*/
 header {
     display: flex;
     justify-content: center;
@@ -70,7 +70,7 @@ header {
         }   
     }
 }
-
+/*ESTILOS LOS H1*/
 article {
     h1 {
         font:$h1;
@@ -84,13 +84,17 @@ article {
         z-index: 1;
     }
 }
-
+/*ESTILOS DEL INDEX*/
 @import "index.scss";
+/*ESTILOS DE NOSOTROS*/
 @import "nosotros.scss";
+/*ESTILOS DE CONTACTOS*/
 @import "contacto.scss";
+/*ESTILOS DE TIENDA*/
 @import "tienda.scss";
+/*ESTILOS DE GALERIA*/
 @import "galeria.scss";
-
+/*ESTILOS DE GENERALES DEL FOOTER*/
 footer {
 
     ul {
@@ -130,7 +134,7 @@ footer {
             align-items: center;
             text-decoration: none;
             color: black;
-            justify-items: stretch;
+            
             text-align: center;
         
         }
