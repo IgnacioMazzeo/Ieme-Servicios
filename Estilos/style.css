@@ -1,3 +1,5 @@
+/*Varialbles*/
+/*Estilos*/
 * {
   margin: 0px;
   padding: 0px;
@@ -16,25 +18,23 @@ body {
 }
 
 header {
-  /*background-color: #d4465ebb;*/
-  /*border: solid 1px #d4465ebb;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;*/
   display: flex;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+  position: relative;
+}
+header .logo {
+  position: absolute;
+  width: 120px;
+  top: 1vw;
+  z-index: 2;
+  transform: translateX(-100px);
 }
 header nav {
   align-self: center;
   display: flex;
   align-items: center;
-}
-header nav .logo {
-  width: 90px;
-  margin: 10px 30px;
-  flex-direction: row;
-  align-self: center;
 }
 header nav li {
   display: flex;
@@ -46,13 +46,17 @@ header nav li {
   margin-top: 16px;
 }
 header nav li a {
-  margin: 30px;
+  margin: 15px 30px;
   font-size: 1em;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: bold;
   color: black;
   text-shadow: 3px 0px 3px rgb(233, 202, 202);
   text-decoration: none;
+}
+header nav li a:hover {
+  font-size: 1, 5em;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgba(255, 255, 255, 0.829), -1px -1px rgba(255, 255, 255, 0.829), -1px 1px rgba(255, 255, 255, 0.829);
 }
 header nav .instagram img, header nav .youtube img {
   flex-direction: row;
@@ -63,15 +67,17 @@ header nav .instagram img, header nav .youtube img {
 }
 
 article h1 {
-  font-size: 2rem;
-  font-family: "Julius Sans One", sans-serif;
+  font: normal 2rem "Julius Sans One", sans-serif;
   text-shadow: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgba(255, 255, 255, 0.829), -1px -1px rgba(255, 255, 255, 0.829), -1px 1px rgba(255, 255, 255, 0.829);
   background-color: rgba(212, 70, 94, 0.6509803922);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   text-align: center;
-  padding: 10px;
+  padding: 20px 10px 10px 40px;
+  position: relative;
+  z-index: 1;
 }
+
 article .textoinicio {
   display: flex;
   flex-direction: column;
@@ -85,8 +91,8 @@ article .textoinicio p {
 }
 article .gridmain {
   display: grid;
-  grid-template-areas: ".  img1   img1   h2e   ." ".  img1   img1   p1    ." "rayo menu1  menu2  menu3  copo" ". menu1a menu2a menu3a ." ".  h2c   img2   img2   ." ".  p2    img2   img2   .";
-  grid-template-rows: 60px 300px 60px 20px 60px 300px;
+  grid-template-areas: ".  img1   img1   h2e   ." ".  img1   img1   p1    ." "rayo menu1  menu2  menu3  copo" ". menu1a menu2a menu3a ." " . . . . ." ".  h2c   img2   img2   ." ".  p2    img2   img2   .";
+  grid-template-rows: 60px 300px 60px 20px 40px 60px 300px;
   grid-template-columns: 5% 35% 5% 35% 5%;
   justify-content: center;
   justify-items: center;
@@ -96,9 +102,8 @@ article .gridmain {
 }
 article .gridmain .h2elec {
   text-align: justify;
-  font-family: "Julius Sans One", sans-serif;
-  font-size: 2em;
-  text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
+  font: normal 2em "Julius Sans One", sans-serif;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgba(255, 255, 255, 0.829), -1px -1px rgba(255, 255, 255, 0.829), -1px 1px rgba(255, 255, 255, 0.829);
   grid-area: h2e;
 }
 article .gridmain .imgmain1 {
@@ -106,6 +111,20 @@ article .gridmain .imgmain1 {
   margin: 10px;
   grid-area: img1;
   border-radius: 20px;
+}
+article .gridmain .imgmain1 {
+  opacity: 0;
+  animation: fadeSlideIn 2.5s forwards;
+}
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 article .gridmain .p1 {
   grid-area: p1;
@@ -120,27 +139,45 @@ article .gridmain .rayo {
 }
 article .gridmain .menucentral1 {
   grid-area: menu1a;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgba(255, 255, 255, 0.829), -1px -1px rgba(255, 255, 255, 0.829), -1px 1px rgba(255, 255, 255, 0.829);
 }
-article .gridmain .cotizacionimg, article .gridmain img {
-  width: 40px;
+article .gridmain .cotizacionimg {
   grid-area: menu1;
+}
+article .gridmain .cotizacionimg img {
+  width: 40px;
+}
+article .gridmain .cotizacionimg img:hover {
+  width: 50px;
+  transition-duration: 0.5s;
 }
 article .gridmain .menucentral2 {
   grid-area: menu2a;
-  text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgba(255, 255, 255, 0.829), -1px -1px rgba(255, 255, 255, 0.829), -1px 1px rgba(255, 255, 255, 0.829);
 }
-article .gridmain .turnosimg, article .gridmain img {
-  width: 40px;
+article .gridmain .turnosimg {
   grid-area: menu2;
+}
+article .gridmain .turnosimg img {
+  width: 40px;
+}
+article .gridmain .turnosimg img:hover {
+  width: 50px;
+  transition-duration: 0.5s;
 }
 article .gridmain .menucentral3 {
   grid-area: menu3a;
-  text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgba(255, 255, 255, 0.829), -1px -1px rgba(255, 255, 255, 0.829), -1px 1px rgba(255, 255, 255, 0.829);
 }
-article .gridmain .galeriaimg, article .gridmain img {
-  width: 40px;
+article .gridmain .galeriaimg {
   grid-area: menu3;
-  text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
+}
+article .gridmain .galeriaimg img {
+  width: 40px;
+}
+article .gridmain .galeriaimg img:hover {
+  width: 50px;
+  transition-duration: 0.5s;
 }
 article .gridmain .copo {
   width: 30px;
@@ -149,9 +186,8 @@ article .gridmain .copo {
 }
 article .gridmain .h2cli {
   text-align: justify;
-  font-family: "Julius Sans One", sans-serif;
-  font-size: 2em;
-  text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
+  font: normal 2em "Julius Sans One", sans-serif;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgba(255, 255, 255, 0.829), -1px -1px rgba(255, 255, 255, 0.829), -1px 1px rgba(255, 255, 255, 0.829);
   grid-area: h2c;
 }
 article .gridmain .imgmain2 {
@@ -160,6 +196,20 @@ article .gridmain .imgmain2 {
   grid-area: img2;
   border-radius: 20px;
 }
+article .gridmain .imgmain2 {
+  opacity: 0;
+  animation: fadeSlideIn2 2.5s forwards;
+}
+@keyframes fadeSlideIn2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 article .gridmain .p2 {
   grid-area: p2;
   text-align: justify;
@@ -167,35 +217,8 @@ article .gridmain .p2 {
   padding: 30px 20px 30px 40px;
 }
 
-.buttonbanner {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  align-items: center;
-  text-decoration: none;
-  margin-top: 30px;
-  margin-bottom: 100px;
-}
-.buttonbanner a {
-  font-family: "Julius Sans One", sans-serif;
-  background-color: rgba(212, 70, 94, 0.6509803922);
-  text-decoration: none;
-  color: black;
-  justify-self: center;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  text-align: center;
-  padding: 10px;
-}
-
-form div button {
-  background-color: rosybrown;
-}
-
 @media (max-width: 576px) {
-  .textoinicio p {
+  article .textoinicio p {
     font-size: 1rem;
   }
   header nav ul {
@@ -225,8 +248,7 @@ form div button {
   .turnosimg {
     display: none;
   }
-  .p1,
-  .p2 {
+  article .gridmain .p1, article .gridmain .p2 {
     font-size: 1em;
     padding: 40px;
   }
@@ -237,6 +259,114 @@ form div button {
     max-width: 20%;
     font-size: 1em;
     align-items: center;
+  }
+}
+section form {
+  margin: 10px;
+}
+section form legend {
+  font-size: 1.4em;
+  text-align: justify;
+}
+
+@media (max-width: 576px) {
+  section form {
+    margin: 10px;
+  }
+  section form legend {
+    font-size: 1.2em;
+    text-align: justify;
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+main .portafolio1 {
+  z-index: 1;
+  align-self: center;
+  width: 88%;
+  background-color: hsla(0, 0%, 100%, 0.7);
+  margin-top: 20px;
+  padding: 10px 0px 50px 0px;
+  border: solid 1px 1px 0px 1px rgba(94, 90, 90, 0.486);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 2px -10px 4px rgba(0, 0, 0, 0.4);
+}
+main .portafolio1 div .h2galeria {
+  font-style: normal 2em "Julius Sans One", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin: 30px;
+  text-align: center;
+}
+main .portafolio2 {
+  z-index: 2;
+  align-self: center;
+  width: 88%;
+  background-color: hsla(0, 0%, 100%, 0.7);
+  padding: 10px 0px 50px 0px;
+  border: solid 1px 1px 0px 1px rgba(94, 90, 90, 0.486);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 4px -10px 4px rgba(0, 0, 0, 0.4);
+}
+main .portafolio2 div .h2galeria {
+  font-style: normal 2em "Julius Sans One", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin: 30px;
+  text-align: center;
+}
+
+footer ul {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+footer ul .buttonbanner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+footer ul .buttonbanner .botoninicio {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgba(212, 70, 94, 0.6509803922);
+  padding: 12px 20px 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+footer a {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 0.7em;
+  text-decoration: none;
+  color: black;
+  justify-items: stretch;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  header .logo {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: 90px;
+    z-index: 0;
+    transform: none;
+    margin: 10px;
+  }
+  article h1 {
+    padding: 20px 10px;
+    font-size: 1.5em;
   }
 }
 

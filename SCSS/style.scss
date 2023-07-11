@@ -1,3 +1,10 @@
+/*Varialbles*/
+$h1: normal 2rem 'Julius Sans One', sans-serif;
+$h2: normal 2em 'Julius Sans One', sans-serif;
+$rosaprincipal:#d4465ea6;
+$sombrablanca: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgb(255, 255, 255, 0.829), -1px -1px rgb(255, 255, 255, 0.829), -1px 1px rgb(255, 255, 255, 0.829);
+
+/*Estilos*/
 * {
     margin: 0px;
     padding: 0px;
@@ -16,26 +23,25 @@ body {
 }
 
 header {
-    /*background-color: #d4465ebb;*/
-    /*border: solid 1px #d4465ebb;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;*/
     display: flex;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+    position: relative;
+
+    .logo {
+        position: absolute;
+        width: 120px;
+        top: 1vw;     
+        z-index: 2;
+        transform: translateX(-100px);
+    }
 
     nav {
         align-self: center;
         display: flex;
         align-items: center;
 
-        .logo {
-            width: 90px;
-            margin: 10px 30px;
-            flex-direction: row;
-            align-self: center;
-        }
 
         li {
             display: flex;
@@ -47,14 +53,19 @@ header {
             margin-top: 16px;
 
             a {
-                margin: 30px;
+                margin: 15px 30px;
                 font-size: 1em;
                 font-family: 'IBM Plex Sans', sans-serif;
                 font-weight: bold;
                 color: black;
                 text-shadow: 3px 0px 3px rgb(233, 202, 202);
                 text-decoration: none;
-            }
+            
+                &:hover {
+                    font-size: 1,5em;
+                    text-shadow: $sombrablanca;
+                }
+            }  
         }
 
         .instagram img, .youtube img {
@@ -69,215 +80,83 @@ header {
 
 article {
     h1 {
-        font-size: 2rem; 
-        font-family: 'Julius Sans One', sans-serif;
-        text-shadow: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgb(255, 255, 255, 0.829), -1px -1px rgb(255, 255, 255, 0.829), -1px 1px rgb(255, 255, 255, 0.829);
-        background-color:#d4465ea6;
+        font:$h1;
+        text-shadow: $sombrablanca;
+        background-color: $rosaprincipal;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         text-align: center;
-        padding: 10px;
-    }
-    .textoinicio {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        p {
-            text-align: justify;
-            max-width: 77%;
-            font-size: 1.3em;
-            margin-top: 20px;
-        }
-    }
-
-    .gridmain {
-        display: grid;
-        grid-template-areas: 
-        ".  img1   img1   h2e   ."
-        ".  img1   img1   p1    ."
-        "rayo menu1  menu2  menu3  copo"
-        ". menu1a menu2a menu3a ."
-        ".  h2c   img2   img2   ."
-        ".  p2    img2   img2   .";
-        
-        grid-template-rows: 60px 300px 60px 20px 60px 300px;
-        grid-template-columns: 5% 35% 5% 35% 5%;
-        justify-content: center;
-        justify-items: center;
-        align-items: center;
-        gap: 10px;
-        margin-top: 30px;
-        
-        .h2elec {
-            text-align: justify;
-            font-family: 'Julius Sans One', sans-serif;
-            font-size: 2em;
-            text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
-            grid-area: h2e;
-        }
-
-        .imgmain1{
-            width: 80%;
-            margin: 10px;
-            grid-area: img1;
-            border-radius: 20px;
-        }
-
-        .p1 {
-            grid-area: p1;
-            text-align: justify;
-            font-size: 1.1em;
-            padding: 30px 40px 30px 20px;
-        }
-
-        .rayo {
-            width: 30px;
-            grid-area: rayo;
-            align-items: center;
-        }
-
-        .menucentral1 {
-            grid-area: menu1a;
-        }
-
-        .cotizacionimg, img{
-            width: 40px;
-            grid-area: menu1;
-        }
-
-        .menucentral2 {
-            grid-area: menu2a;
-            text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
-        }
-
-        .turnosimg, img{
-            width: 40px;
-            grid-area: menu2;
-        }
-
-        .menucentral3 {
-            grid-area: menu3a;
-            text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
-        }
-
-        .galeriaimg, img {
-            width: 40px;
-            grid-area: menu3;
-            text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
-        }
-
-        .copo {
-            width: 30px;
-            grid-area: copo;
-            align-items:center;
-        }
-        
-        .h2cli {
-            text-align: justify;
-            font-family: 'Julius Sans One', sans-serif;
-            font-size: 2em;
-            text-shadow: 1px 1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
-            grid-area: h2c;
-        }
-
-        .imgmain2 {
-            width: 80%;
-            margin: 10px;
-            grid-area: img2;
-            border-radius: 20px;
-        }
-        
-        .p2 {
-            grid-area: p2;
-            text-align: justify;
-            font-size: 1.1em;
-            padding: 30px 20px 30px 40px;
-        }
+        padding: 20px 10px 10px 40px;
+        position: relative;
+        z-index: 1;
     }
 }
 
-.buttonbanner {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    text-decoration: none;
-    margin-top: 30px;
-    margin-bottom: 100px;
+@import "index.scss";
+@import "nosotros.scss";
+@import "contacto.scss";
+@import "tienda.scss";
+@import "galeria.scss";
+
+footer {
+   
+    ul {
+        margin-left: 0px;
+        padding-left: 0px;
+        
+        .buttonbanner {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            margin-bottom: 100px;
+            
+            .botoninicio {
+                display: flex;
+                flex-direction: row;
+                justify-self: center;
+                align-items: center;
+                text-decoration: none;
+                font-weight: bold;
+                background-color: $rosaprincipal;
+                padding: 12px 20px 10px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+    
+            }
+        }
+    }
+
 
     a {
         font-family: 'Julius Sans One', sans-serif;
-        background-color:#d4465ea6;
+        font-size: 0.7em;
         text-decoration: none;
         color: black;
-        justify-self: center;
-        
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        justify-items: stretch;
         text-align: center;
-        padding: 10px;
     }
 }
 
-form div button{
-    background-color: rosybrown;
+
+
+@media (max-width: 576px) { 
+    header .logo {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        width: 90px; 
+        z-index: 0;
+        transform: none;
+        margin: 10px;        
+    }
+
+    article h1 {
+        padding: 20px 10px;
+        font-size: 1.5em;
+    }
 }
-
-@media (max-width: 576px) {
-    
-    .textoinicio p {
-      font-size: 1rem;
-    }
-
-    header nav ul {
-      display: none;
-    }
-    
-    .instagram {
-      order: -1;
-    }
-
-    .youtube img,
-    .instagram img {
-      width: 30px;
-    }
-
-    article .gridmain {
-      grid-template-areas: "  h2e  " "  img1 " "   p1  " "  h2c  " " img2  " "   p2  ";
-      grid-template-rows: 100px 200px 200px 100px 200px 200px;
-      grid-template-columns: 100%;
-      margin-top: 30px;
-      margin-bottom: 100px;
-    }
-
-    .menucentral1,
-    .menucentral2,
-    .menucentral3,
-    .rayo,
-    .copo,
-    .galeriaimg,
-    .cotizacionimg,
-    .turnosimg {
-      display: none;
-    }
-
-    .p1,
-    .p2 {
-      font-size: 1em;
-      padding: 40px;
-    }
-
-    .footerbanner {
-      display: block;
-    }
-
-    .navbar-brand {
-      max-width: 20%;
-      font-size: 1em;
-      align-items: center;
-    }
-  }
-  

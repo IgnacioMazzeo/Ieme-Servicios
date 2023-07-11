@@ -1,0 +1,236 @@
+
+//ESTILOS INDEX
+
+article {
+    
+    .textoinicio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            text-align: justify;
+            max-width: 77%;
+            font-size: 1.3em;
+            margin-top: 20px;
+        }
+    }
+
+    .gridmain {
+        display: grid;
+        grid-template-areas: 
+        ".  img1   img1   h2e   ."
+        ".  img1   img1   p1    ."
+        "rayo menu1  menu2  menu3  copo"
+        ". menu1a menu2a menu3a ."
+        " . . . . ."
+        ".  h2c   img2   img2   ."
+        ".  p2    img2   img2   .";
+        
+        grid-template-rows: 60px 300px 60px 20px 40px 60px 300px;
+        grid-template-columns: 5% 35% 5% 35% 5%;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+        
+        .h2elec {
+            text-align: justify;
+            font: $h2;
+            text-shadow: $sombrablanca;
+            grid-area: h2e;
+        }
+
+        .imgmain1{
+            width: 80%;
+            margin: 10px;
+            grid-area: img1;
+            border-radius: 20px;
+            
+            //Animación Derecha-Izquierda + Fade in
+            & {
+                opacity: 0;
+                animation: fadeSlideIn 2.5s forwards;
+            }
+
+            @keyframes fadeSlideIn {
+                0% {
+                  opacity: 0;
+                  transform: translateX(50px);
+                }
+                100% {
+                  opacity: 1;
+                  transform: translateX(0);
+                }
+            }
+        }
+
+        .p1 {
+            grid-area: p1;
+            text-align: justify;
+            font-size: 1.1em;
+            padding: 30px 40px 30px 20px;
+        }
+
+        .rayo {
+            width: 30px;
+            grid-area: rayo;
+            align-items: center;
+        }
+
+        .menucentral1 {
+            grid-area: menu1a;
+            text-shadow: $sombrablanca;
+        }
+
+        .cotizacionimg { 
+            grid-area: menu1;
+
+            img {
+                width: 40px;
+                       
+                &:hover {
+                    width: 50px;
+                    transition-duration: 0.5s;                 
+                }
+            }   
+        }
+
+        .menucentral2 {
+            grid-area: menu2a;
+            text-shadow: $sombrablanca;
+        }
+
+        .turnosimg{
+            grid-area: menu2;
+
+            img{
+                width: 40px;
+
+                &:hover {
+                    width: 50px;
+                    transition-duration: 0.5s;                  
+                }
+            }
+        }
+
+        .menucentral3 {
+            grid-area: menu3a;
+            text-shadow: $sombrablanca;
+        }
+
+        .galeriaimg {
+            grid-area: menu3;
+
+            img {
+                width: 40px;
+
+                &:hover {
+                    width: 50px;
+                    transition-duration: 0.5s; 
+                }
+            } 
+        }
+
+        .copo {
+            width: 30px;
+            grid-area: copo;
+            align-items:center;
+        }
+        
+        .h2cli {
+            text-align: justify;
+            font: $h2;
+            text-shadow: $sombrablanca;
+            grid-area: h2c;
+        }
+
+        .imgmain2 {
+            width: 80%;
+            margin: 10px;
+            grid-area: img2;
+            border-radius: 20px;
+
+            //Animación Izquierda-Derecha + Fade in
+            & {
+                opacity: 0;
+                animation: fadeSlideIn2 2.5s forwards;
+            }
+
+            @keyframes fadeSlideIn2 {
+                0% {
+                  opacity: 0;
+                  transform: translateX(-50px);
+                }
+                100% {
+                  opacity: 1;
+                  transform: translateX(0);
+                }
+            }
+        }
+        
+        .p2 {
+            grid-area: p2;
+            text-align: justify;
+            font-size: 1.1em;
+            padding: 30px 20px 30px 40px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    
+    article .textoinicio p {
+      font-size: 1rem;
+    }
+
+    header nav ul {
+      display: none;
+    }
+    
+    .instagram {
+      order: -1;
+    }
+
+    .youtube img,
+    .instagram img {
+      width: 30px;
+    }
+
+    article .gridmain {
+      grid-template-areas: "  h2e  " "  img1 " "   p1  " "  h2c  " " img2  " "   p2  ";
+      grid-template-rows: 100px 200px 200px 100px 200px 200px;
+      grid-template-columns: 100%;
+      margin-top: 30px;
+      margin-bottom: 100px;
+    }
+
+    .menucentral1,
+    .menucentral2,
+    .menucentral3,
+    .rayo,
+    .copo,
+    .galeriaimg,
+    .cotizacionimg,
+    .turnosimg {
+      display: none;
+    }
+
+    article .gridmain {
+        .p1, .p2 {
+        font-size: 1em;
+        padding: 40px;
+        }
+    }
+
+    .footerbanner {
+      display: block;
+    }
+
+    .navbar-brand {
+      max-width: 20%;
+      font-size: 1em;
+      align-items: center;
+    }
+}
