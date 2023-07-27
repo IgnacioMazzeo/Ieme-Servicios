@@ -7,8 +7,12 @@
     <title>Ieme Servicios</title>
     <link rel="Icon" href="../Archivos/ieme.ico">
     <link rel="stylesheet" type="text/css" href="../Estilos/style.css"> 
+    <!-- Fuentes --> 
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 <body>
@@ -28,83 +32,100 @@
 </header>
     <main>
         <article>
-            <h1>¿En qué le podemos ayudar?</h1> 
+            <h1>¿En qué le ayudamos?</h1> 
             <section>
                 <form>
-                    <fieldset class=" container col-md-8">
-                    <legend>Complete el siguiente formulario y envienoslo para que pueda contactarnos.</legend>
-                    <legend>Le brindaremos atención telefónica, vía mail y si lo desea, una visita programada.</legend>
-                    <div class="mb-3 col-md-7">
-                        <label for="Select1" class="form-label">1. Selecciona el área de especialización.</label>
-                        <select id="Select1" class="form-select">
-                            <option>Electricista</option>
-                            <option>Climatización</option>
-                            <option>Refrigeración</option>
-                        </select>
-                    </div>
-                    <div class="mb-3 col-md-7">
-                        <label for="Select2" class="form-label">2.a. En el caso de refrigeración o climatización, especifique el equipo.</label>
-                        <select id="Select2" class="form-select">
-                            <option>Split (2500 frigorías a 9000 frigorías)</option>
-                            <option>Piso-techo</option>
-                            <option>Multisplit</option>
-                            <option>Cassette</option>
-                            <option>Baja silueta</option>
-                            <option>Rooftop</option>
-                        </select>
-                        <input type="text" id="TextInput" class="form-control" placeholder="Marca del equipo">
+                    <fieldset class="container col-md-6 d-flex flex-column justify-content-center align-items-center">
+                        <legend>Rellene el siguiente formulario y envienoslo para que podamos contactarnos.
+                                Le brindaremos atención remota y, si lo desea, programaremos una reunión.</legend>
+                        <div class="mb-3 col-md-12">
+                            <label for="Select1" class="form-label">1. Selecciona el área de especialización.</label>
+                            <select id="Select1" class="form-select">
+                                <option>Electricista</option>
+                                <option>Climatización</option>
+                                <option>Refrigeración</option>
+                            </select>
                         </div>
-                    </div>
-                    <div class="mb-3 col-md-7">
-                        <label for="Select3" class="form-label">2.b. Especifique la clase de servicio de climatización o refrigeración.</label>
-                        <select id="Select3" class="form-select">
-                            <option>Proyecto climatización</option>
-                            <option>Mantenimiento de emergencia</option>
-                            <option>Mantenimiento / revisión de rutina</option>
-                            <option>Instalación de nueva/s unidad/es</option>
-                            <option>Asesoramiento remoto</option>
-                        </select>
-                        <input type="text" id="TextInput" class="form-control" placeholder="Otra tarea">
+                        <div class="mb-3 col-md-12">
+                            <label for="Select2" class="form-label">2.a. En el caso de refrigeración o climatización, especifique el equipo.</label>
+                            <select id="Select2" class="form-select">
+                                <option>Split (2500 frigorías a 9000 frigorías)</option>
+                                <option>Piso-techo</option>
+                                <option>Multisplit</option>
+                                <option>Cassette</option>
+                                <option>Baja silueta</option>
+                                <option>Rooftop</option>
+                            </select>
+                            <input type="text" id="TextInput1" class="form-control" placeholder="Marca del equipo">
                         </div>
-                    </div>
-                    <div class="mb-3 col-md-7">
-                        <label for="Select4" class="form-label">3. En Caso de requerir asistencia en electricidad, especifique qué servicio requiere.</label>
-                        <select id="Select4" class="form-select">
-                            <option>Proyecto eléctrico</option>
-                            <option>Mantenimiento de emergencia</option>
-                            <option>Mantenimiento de rutina</option>
-                            <option>Extensión de instalación existente</option>
-                            <option>Instalación de artefactos (luminarias, ventiladores, extractores, ...)</option>
-                            <option>Instalación o extensión de circuito para equipo de climatización</option>
-                            <option>Asesoramiento remoto</option>
-                        </select>
-                        <input type="text" id="TextInput" class="form-control" placeholder="Otra tarea">
+                        <div class="image-container mb-3 col-md-12">
+                            <img class="imgloop" src="../Archivos/Marcas/carrier.png" alt="carrier">
+                            <img class="imgloop" src="../Archivos/Marcas/lg.png" alt="lg">
+                            <img class="imgloop" src="../Archivos/Marcas/philco.png" alt="philco">
+                            <img class="imgloop" src="../Archivos/Marcas/philips.png" alt="philips">
+                            <img class="imgloop" src="../Archivos/Marcas/surrey.jpg" alt="surrey">
+                            <img class="imgloop" src="../Archivos/Marcas/york.png" alt="york">
+                            <img class="imgloop" src="../Archivos/Marcas/carrier.png" alt="carrier">
+                            <img class="imgloop" src="../Archivos/Marcas/lg.png" alt="lg">
+                            <img class="imgloop" src="../Archivos/Marcas/philco.png" alt="philco">
+                            <img class="imgloop" src="../Archivos/Marcas/philips.png" alt="philips">
+                            <img class="imgloop" src="../Archivos/Marcas/surrey.jpg" alt="surrey">
+                            <img class="imgloop" src="../Archivos/Marcas/york.png" alt="york">
+                            <img class="imgloop" src="../Archivos/Marcas/carrier.png" alt="carrier">
+                            <img class="imgloop" src="../Archivos/Marcas/lg.png" alt="lg">
+                            <img class="imgloop" src="../Archivos/Marcas/philco.png" alt="philco">
+                            <img class="imgloop" src="../Archivos/Marcas/philips.png" alt="philips">
+                            <img class="imgloop" src="../Archivos/Marcas/surrey.jpg" alt="surrey">
+                            <img class="imgloop" src="../Archivos/Marcas/york.png" alt="york">
                         </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="Select5" class="form-label">4. Seleccione cómo le gustaría que nos contactemos con usted.</label>    
-                            <div class="form-check col-md-5">
+                        <div class="mb-3 col-md-12">
+                            <label for="Select3" class="form-label">2.b. Especifique la clase de servicio de climatización o refrigeración.</label>
+                            <select id="Select3" class="form-select">
+                                <option>Proyecto climatización</option>
+                                <option>Mantenimiento de emergencia</option>
+                                <option>Mantenimiento / revisión de rutina</option>
+                                <option>Instalación de nueva/s unidad/es</option>
+                                <option>Asesoramiento remoto</option>
+                            </select>
+                            <input type="text" id="TextInput2" class="form-control" placeholder="Otra tarea">
+                        </div>
+                        <div class="mb-3 col-md-12">
+                            <label for="Select4" class="form-label">3. En Caso de requerir asistencia en electricidad, especifique qué servicio requiere.</label>
+                            <select id="Select4" class="form-select">
+                                <option>Proyecto eléctrico</option>
+                                <option>Mantenimiento de emergencia</option>
+                                <option>Mantenimiento de rutina</option>
+                                <option>Extensión de instalación existente</option>
+                                <option>Instalación de artefactos (luminarias, ventiladores, extractores, ...)</option>
+                                <option>Instalación o extensión de circuito para equipo de climatización</option>
+                                <option>Asesoramiento remoto</option>
+                            </select>
+                            <input type="text" id="TextInput3" class="form-control" placeholder="Otra tarea">
+                        </div>
+                        <div class="mb-3 col-md-12">
+                            <label for="Select5" class="form-label">4. Seleccione cómo le gustaría que nos contactemos con usted.</label>    
+                            <div class="form-check mb-12 col-md-9">
                                 <input class="form-check-input" type="checkbox" id="FieldsetCheck1">
-                                <label class="form-check-label" for="FieldsetCheck1">Vía telefónica.
+                                <label class="form-check-label" for="FieldsetCheck1">Vía telefónica
                                 </label>
-                                <input type="text" id="TextInput" class="form-control" placeholder="N° de teléfono">
+                                <input type="text" id="TextInput4a" class="form-control" placeholder="N° de teléfono">
                             </div>
-                            <div class="form-check col-md-5">
+                            <div class="form-check mb-12 col-md-9">
                                 <input class="form-check-input" type="checkbox" id="FieldsetCheck2">
-                                <label class="form-check-label" for="FieldsetCheck2">Vía mail.
+                                <label class="form-check-label" for="FieldsetCheck2">Vía mail
                                 </label>
-                                <input type="text" id="TextInput" class="form-control" placeholder="Correo electrónico">
+                                <input type="text" id="TextInput4b" class="form-control" placeholder="Correo electrónico">
                             </div>
-                            <div class="form-check col-md-5">
+                            <div class="form-check mb-12 col-md-9">
                                 <input class="form-check-input" type="checkbox" id="FieldsetCheck3">
-                                <label class="form-check-label" for="FieldsetCheck3">Visita programada. (costos adicionales)
+                                <label class="form-check-label" for="FieldsetCheck3">Visita programada (costos adicionales)
                                 </label>
-                                <input type="text" id="TextInput" class="form-control" placeholder="Ciudad/Dirección">
+                                <input type="text" id="TextInput4c" class="form-control" placeholder="Ciudad/Dirección">
                             </div>
-                    </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
                     </fieldset>
-                  </form>
+                </form>
             </section>    
         </article>
     </main>

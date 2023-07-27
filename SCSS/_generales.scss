@@ -1,0 +1,169 @@
+/*VARIABLES*/
+$h1: normal 2rem 'Julius Sans One', sans-serif;
+$h2: 400 2em  'Ubuntu', sans-serif;
+$plight: 300 1.2em/1.5 'Ubuntu', sans-serif;
+$pitalic: 300 italic 1.1em/1.5 'Ubuntu', sans-serif;
+$navfont: 400 1.1em 'Varela Round', sans-serif;
+
+$rosaprincipal:#E08493;
+$sombrablanca: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgb(255, 255, 255, 0.829), -1px -1px rgb(255, 255, 255, 0.829), -1px 1px rgb(255, 255, 255, 0.829);
+
+/*ESTILOS GLOBALES*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/subtle_grunge.png);
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/*ESTILOS DEL HEADER*/
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: relative;
+
+    .logo {
+        position: absolute;
+        width: 125px;
+        top: 1.4vw;
+        z-index: 5;
+        transform: translateX(-120px);       
+        border-radius: 50%;
+        border-collapse: collapse;
+    }
+
+    nav {
+        align-self: center;
+        display: flex;
+        align-items: center;
+
+
+        li {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            float: left;
+            align-self: center;
+            justify-self: center;
+            margin-top: 16px;
+
+            a {
+                margin: 15px 30px;
+                font: $navfont;
+                color: black;
+                text-decoration: none;
+            
+                &:hover {
+                    font-size: 1,5em;
+                    text-shadow: $sombrablanca;
+                }
+            }  
+        }
+
+        .instagram img, .youtube img {
+            flex-direction: row;
+            align-self: center;
+            justify-self: center;
+            margin: 10px;
+            width: 30px;
+        }   
+    }
+}
+
+/*ESTILOS LOS H1*/
+article {
+    h1 {
+        font:$h1;
+        text-shadow: $sombrablanca;
+        background-color: $rosaprincipal;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom: solid 5px #f18e9ea9;
+        text-align: center;
+        padding: 20px 10px 10px 40px;
+        position: relative;
+        z-index: 4;
+    }
+}
+
+/*ESTILOS DEL FOOTER*/
+footer {
+
+    ul {
+        margin-left: 0px;
+        padding-left: 0px;
+        
+        .buttonbanner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 100px;
+            
+            .botoninicio {
+                color: black;
+                display: flex;
+                flex-direction: row;
+                justify-self: center;
+                text-decoration: none;
+                font: $pitalic;
+                background-color: $rosaprincipal;
+                padding: 12px 20px 10px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+    }
+
+    .footerbanner {
+        display: none;
+        
+        .navbar-brand {
+            max-width: 20%;
+            font: $plight;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            
+            text-align: center;
+        
+        }
+    }
+}
+
+@media (max-width: 576px) { 
+    header {
+        .logo {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        width: 90px; 
+        z-index: 0;
+        transform: none;
+        margin: 10px;        
+        }
+    }
+
+    article {
+        h1 {
+            padding: 20px 10px;
+            font-size: 1.5em;
+            position: sticky;
+            top: 0px;
+        }
+    }    
+
+    footer {
+        .footerbanner {
+        display: block;
+        }
+    }
+}

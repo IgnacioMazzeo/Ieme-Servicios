@@ -1,28 +1,80 @@
-//ESTILOS COTIZACIÓN Y TURNOS
+//ESTILOS CONTACTO
 
 section {
     form {
-
+        
         margin: 10px;
 
-        legend{
-            font-size: 1.4em;
-            text-align: justify;
-        }
+        fieldset{ 
+
+            legend{
+                font: $plight;
+                text-align: justify;
+                justify-content: center;
+                margin: 30px;
+            }
+
+            div {
+                font: $plight;
+                margin: 20px;
+            }
+
+            .image-container {
+                
+                margin: 0px;
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+
+                img {
+                    margin: 10px 30px;
+                    width: 10%; 
+                    height: auto; 
+                    display: inline-block; 
+                    animation: slideLeft 60s linear infinite; 
+                }
+                
+                @keyframes slideLeft {
+                    from {
+                      transform: translateX(0); /* Posición inicial de las imágenes */
+                    }
+                    to {
+                      transform: translateX(-2500%); /* Posición final de las imágenes */
+                    }
+                }
+            }
+            
+        }    
     }
 }
 
 @media (max-width: 576px) { 
     
     section {
-        form {
+        form { 
+            fieldset {
+                
+                div {
+                    font-size: 1em;
+                }
 
-            margin: 10px;
-    
-            legend{
-                font-size: 1.2em;
-                text-align: justify;
-            }
+                legend{
+                    font-size: 1em;
+                    padding: 5px;        
+                }
+
+                .image-container {
+                    margin: 0px;
+                    width: 120%;
+                    overflow: hidden;
+                    white-space: nowrap;
+
+                    img {
+                        margin: 0px 15px;
+                        width: 8%; 
+                    }
+                }
+            }    
         }
     }
 }

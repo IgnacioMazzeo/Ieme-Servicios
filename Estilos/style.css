@@ -1,5 +1,7 @@
-/*Varialbles*/
-/*ESTILOS DE GLOBALES*/
+@charset "UTF-8";
+/*ESTILOS GENERALES DE LA WEB, VARIABLES, HEADER Y FOOTER */
+/*VARIABLES*/
+/*ESTILOS GLOBALES*/
 * {
   margin: 0px;
   padding: 0px;
@@ -10,7 +12,7 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
-/*ESTILOS GENERALES DEL HEADER*/
+/*ESTILOS DEL HEADER*/
 header {
   display: flex;
   justify-content: center;
@@ -20,10 +22,12 @@ header {
 }
 header .logo {
   position: absolute;
-  width: 120px;
-  top: 1vw;
-  z-index: 2;
-  transform: translateX(-100px);
+  width: 125px;
+  top: 1.4vw;
+  z-index: 5;
+  transform: translateX(-120px);
+  border-radius: 50%;
+  border-collapse: collapse;
 }
 header nav {
   align-self: center;
@@ -41,11 +45,8 @@ header nav li {
 }
 header nav li a {
   margin: 15px 30px;
-  font-size: 1em;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: bold;
+  font: 400 1.1em "Varela Round", sans-serif;
   color: black;
-  text-shadow: 3px 0px 3px rgb(233, 202, 202);
   text-decoration: none;
 }
 header nav li a:hover {
@@ -64,15 +65,75 @@ header nav .instagram img, header nav .youtube img {
 article h1 {
   font: normal 2rem "Julius Sans One", sans-serif;
   text-shadow: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgba(255, 255, 255, 0.829), -1px -1px rgba(255, 255, 255, 0.829), -1px 1px rgba(255, 255, 255, 0.829);
-  background-color: rgba(212, 70, 94, 0.6509803922);
+  background-color: #E08493;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  border-bottom: solid 5px rgba(241, 142, 158, 0.662745098);
   text-align: center;
   padding: 20px 10px 10px 40px;
   position: relative;
-  z-index: 1;
+  z-index: 4;
 }
 
+/*ESTILOS DEL FOOTER*/
+footer ul {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+footer ul .buttonbanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+footer ul .buttonbanner .botoninicio {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  text-decoration: none;
+  font: 300 italic 1.1em/1.5 "Ubuntu", sans-serif;
+  background-color: #E08493;
+  padding: 12px 20px 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+footer .footerbanner {
+  display: none;
+}
+footer .footerbanner .navbar-brand {
+  max-width: 20%;
+  font: 300 1.2em/1.5 "Ubuntu", sans-serif;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  header .logo {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: 90px;
+    z-index: 0;
+    transform: none;
+    margin: 10px;
+  }
+  article h1 {
+    padding: 20px 10px;
+    font-size: 1.5em;
+    position: sticky;
+    top: 0px;
+  }
+  footer .footerbanner {
+    display: block;
+  }
+}
 /*ESTILOS DEL INDEX*/
 article .textoinicio {
   display: flex;
@@ -98,7 +159,7 @@ article .gridmain {
 }
 article .gridmain .h2elec {
   text-align: justify;
-  font: normal 2em "Julius Sans One", sans-serif;
+  font: 400 2em "Ubuntu", sans-serif;
   text-shadow: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgba(255, 255, 255, 0.829), -1px -1px rgba(255, 255, 255, 0.829), -1px 1px rgba(255, 255, 255, 0.829);
   grid-area: h2e;
 }
@@ -182,7 +243,7 @@ article .gridmain .copo {
 }
 article .gridmain .h2cli {
   text-align: justify;
-  font: normal 2em "Julius Sans One", sans-serif;
+  font: 400 2em "Ubuntu", sans-serif;
   text-shadow: 1px 1px rgba(255, 255, 255, 0.829), 1px -1px rgba(255, 255, 255, 0.829), -1px -1px rgba(255, 255, 255, 0.829), -1px 1px rgba(255, 255, 255, 0.829);
   grid-area: h2c;
 }
@@ -258,27 +319,64 @@ article .gridmain .p2 {
 section form {
   margin: 10px;
 }
-section form legend {
-  font-size: 1.4em;
+section form fieldset legend {
+  font: 300 1.2em/1.5 "Ubuntu", sans-serif;
   text-align: justify;
+  justify-content: center;
+  margin: 30px;
+}
+section form fieldset div {
+  font: 300 1.2em/1.5 "Ubuntu", sans-serif;
+  margin: 20px;
+}
+section form fieldset .image-container {
+  margin: 0px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+section form fieldset .image-container img {
+  margin: 10px 30px;
+  width: 10%;
+  height: auto;
+  display: inline-block;
+  animation: slideLeft 60s linear infinite;
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(0); /* Posición inicial de las imágenes */
+  }
+  to {
+    transform: translateX(-2500%); /* Posición final de las imágenes */
+  }
 }
 
 @media (max-width: 576px) {
-  section form {
-    margin: 10px;
+  section form fieldset div {
+    font-size: 1em;
   }
-  section form legend {
-    font-size: 1.2em;
-    text-align: justify;
+  section form fieldset legend {
+    font-size: 1em;
+    padding: 5px;
+  }
+  section form fieldset .image-container {
+    margin: 0px;
+    width: 120%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  section form fieldset .image-container img {
+    margin: 0px 15px;
+    width: 8%;
   }
 }
 /*ESTILOS DE TIENDA*/
 /*ESTILOS DE GALERIA*/
-main {
+main article {
   display: flex;
   flex-direction: column;
 }
-main .portafolio1 {
+main article .portafolio1 {
   z-index: 1;
   align-self: center;
   width: 88%;
@@ -290,13 +388,13 @@ main .portafolio1 {
   border-top-right-radius: 20px;
   box-shadow: 2px -10px 4px rgba(0, 0, 0, 0.4);
 }
-main .portafolio1 div .h2galeria {
-  font-style: normal 2em "Julius Sans One", sans-serif;
+main article .portafolio1 div .h2galeria {
+  font-style: 400 2em "Ubuntu", sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   margin: 30px;
   text-align: center;
 }
-main .portafolio2 {
+main article .portafolio2 {
   z-index: 2;
   align-self: center;
   width: 88%;
@@ -307,69 +405,11 @@ main .portafolio2 {
   border-top-right-radius: 20px;
   box-shadow: 4px -10px 4px rgba(0, 0, 0, 0.4);
 }
-main .portafolio2 div .h2galeria {
-  font-style: normal 2em "Julius Sans One", sans-serif;
+main article .portafolio2 div .h2galeria {
+  font-style: 400 2em "Ubuntu", sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   margin: 30px;
   text-align: center;
-}
-
-/*ESTILOS DE GENERALES DEL FOOTER*/
-footer ul {
-  margin-left: 0px;
-  padding-left: 0px;
-}
-footer ul .buttonbanner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 30px;
-  margin-bottom: 100px;
-}
-footer ul .buttonbanner .botoninicio {
-  color: black;
-  display: flex;
-  flex-direction: row;
-  justify-self: center;
-  text-decoration: none;
-  font-weight: bold;
-  background-color: rgba(212, 70, 94, 0.6509803922);
-  padding: 12px 20px 10px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-footer .footerbanner {
-  display: none;
-}
-footer .footerbanner .navbar-brand {
-  max-width: 20%;
-  font-size: 0.5em;
-  align-items: center;
-  text-decoration: none;
-  color: black;
-  text-align: center;
-}
-
-@media (max-width: 576px) {
-  header .logo {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    width: 90px;
-    z-index: 0;
-    transform: none;
-    margin: 10px;
-  }
-  article h1 {
-    padding: 20px 10px;
-    font-size: 1.5em;
-  }
-  footer .footerbanner {
-    display: block;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
