@@ -1,1 +1,19 @@
 //ESTILOS NOSOTROS
+
+@media (max-width: 576px) { 
+    main{
+        article{
+            section{
+
+                margin: 20px;
+
+                div{
+                    p{
+                        font: $plight 0.8em;
+                        text-align: justify;
+                    }
+                }
+            } 
+        }
+    }
+}

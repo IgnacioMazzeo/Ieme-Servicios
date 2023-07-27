@@ -315,6 +315,15 @@ article .gridmain .p2 {
   }
 }
 /*ESTILOS DE NOSOTROS*/
+@media (max-width: 576px) {
+  main article section {
+    margin: 20px;
+  }
+  main article section div p {
+    font: 300 1.2em/1.5 "Ubuntu", sans-serif 0.8em;
+    text-align: justify;
+  }
+}
 /*ESTILOS DE CONTACTOS*/
 section form {
   margin: 10px;
@@ -323,10 +332,10 @@ section form fieldset legend {
   font: 300 1.2em/1.5 "Ubuntu", sans-serif;
   text-align: justify;
   justify-content: center;
-  margin: 30px;
+  margin: 5px 30px 30px;
 }
 section form fieldset div {
-  font: 300 1.2em/1.5 "Ubuntu", sans-serif;
+  font: 300 1.2em/1.5 "Ubuntu", sans-serif 0.8em;
   margin: 20px;
 }
 section form fieldset .image-container {
@@ -361,12 +370,12 @@ section form fieldset .image-container img {
   }
   section form fieldset .image-container {
     margin: 0px;
-    width: 120%;
+    width: 100%;
     overflow: hidden;
     white-space: nowrap;
   }
   section form fieldset .image-container img {
-    margin: 0px 15px;
+    margin: 0px 10px;
     width: 8%;
   }
 }
@@ -379,8 +388,8 @@ main article {
 main article .portafolio1 {
   z-index: 1;
   align-self: center;
-  width: 88%;
-  background-color: hsla(0, 0%, 100%, 0.7);
+  width: 60%;
+  background-color: rgba(214, 149, 105, 0.568627451);
   margin-top: 20px;
   padding: 10px 0px 50px 0px;
   border: solid 1px 1px 0px 1px rgba(94, 90, 90, 0.486);
@@ -397,8 +406,8 @@ main article .portafolio1 div .h2galeria {
 main article .portafolio2 {
   z-index: 2;
   align-self: center;
-  width: 88%;
-  background-color: hsla(0, 0%, 100%, 0.7);
+  width: 60%;
+  background-color: rgba(214, 149, 105, 0.568627451);
   padding: 10px 0px 50px 0px;
   border: solid 1px 1px 0px 1px rgba(94, 90, 90, 0.486);
   border-top-left-radius: 20px;
@@ -410,6 +419,12 @@ main article .portafolio2 div .h2galeria {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   margin: 30px;
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  main article .portafolio1, main article .portafolio2 {
+    width: 90%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

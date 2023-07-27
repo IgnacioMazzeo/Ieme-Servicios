@@ -11,11 +11,11 @@ section {
                 font: $plight;
                 text-align: justify;
                 justify-content: center;
-                margin: 30px;
+                margin: 5px 30px 30px;
             }
 
             div {
-                font: $plight;
+                font: $plight 0.8em;
                 margin: 20px;
             }
 
@@ -65,12 +65,12 @@ section {
 
                 .image-container {
                     margin: 0px;
-                    width: 120%;
+                    width: 100%;
                     overflow: hidden;
                     white-space: nowrap;
 
                     img {
-                        margin: 0px 15px;
+                        margin: 0px 10px;
                         width: 8%; 
                     }
                 }
