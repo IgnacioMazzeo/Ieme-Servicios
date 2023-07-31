@@ -315,15 +315,11 @@ article .gridmain .p2 {
   }
 }
 /*ESTILOS DE NOSOTROS*/
-@media (max-width: 576px) {
-  main article section {
-    margin: 20px;
-  }
-  main article section div p {
-    font: 300 1.2em/1.5 "Ubuntu", sans-serif 0.8em;
-    text-align: justify;
-  }
+main article section div p {
+  font: 300 1.2em/1.5 "Ubuntu", sans-serif;
+  text-align: justify;
 }
+
 /*ESTILOS DE CONTACTOS*/
 section form {
   margin: 10px;
@@ -389,7 +385,7 @@ main article .portafolio1 {
   z-index: 1;
   align-self: center;
   width: 60%;
-  background-color: rgba(214, 149, 105, 0.568627451);
+  background-color: rgba(0, 0, 0, 0.2274509804);
   margin-top: 20px;
   padding: 10px 0px 50px 0px;
   border: solid 1px 1px 0px 1px rgba(94, 90, 90, 0.486);
@@ -407,7 +403,7 @@ main article .portafolio2 {
   z-index: 2;
   align-self: center;
   width: 60%;
-  background-color: rgba(214, 149, 105, 0.568627451);
+  background-color: rgba(0, 0, 0, 0.2274509804);
   padding: 10px 0px 50px 0px;
   border: solid 1px 1px 0px 1px rgba(94, 90, 90, 0.486);
   border-top-left-radius: 20px;
